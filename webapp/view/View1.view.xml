@@ -1,0 +1,20 @@
+<mvc:View controllerName="file.fileUpload.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<l:VerticalLayout>
+						<u:FileUploader id="fileUploader" name="myFileUpload" uploadUrl="upload/" tooltip="Upload your file to the local server"
+							uploadOnChange="true" uploadComplete="handleUploadComplete">
+							<u:parameters>
+								<u:FileUploaderParameter name="type" value="image/jpeg/"></u:FileUploaderParameter>
+							</u:parameters>
+						</u:FileUploader>
+						<Button text="upload" press="fileUpload"/>
+					</l:VerticalLayout>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
